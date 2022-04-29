@@ -1,10 +1,10 @@
-import {Navbar, Favoun, Footer} from './components';
+import {Navbar, Favounav, Favoun, Footer} from './components';
 
 export default function App() {
   return (
     <div>
       <Navbar />
-      <Favoun />
+      <Favounav />
       <Footer />
     </div>
   )
