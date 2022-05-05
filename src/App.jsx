@@ -1,4 +1,4 @@
-import {Navbar, Favounav, Favoun, Footer} from './components';
+import { Navbar, Favounav, Footer } from './components';
 
 export default function App() {
   return (
