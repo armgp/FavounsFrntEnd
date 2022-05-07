@@ -9,8 +9,6 @@ const Favoun = (props) => {
                 <div class="my-7 h-10 w-28 rounded-2xl border border-x-2 border-black p-1 font-extrabold hover:border-x-4">{props.price} oweins</div>
             </button>
         </div>
-
-
     );
 }
 
