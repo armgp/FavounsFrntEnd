@@ -11,14 +11,14 @@ const Navbar = () => {
 
                     <div class="items-center justify-end flex-1 hidden space-x-4 sm:flex">
                         <button
-                            class="border-2 border-black px-5 py-2 text-sm font-medium text-gray-500 bg-gray-100 rounded-lg"
+                            class="border-2 border-black px-5 py-2 text-sm font-medium text-black bg-gray-100 rounded-lg"
                             href=""
                         >
                             Log in
                         </button>
 
                         <button
-                            class="border-2 border-black px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg"
+                            class="border-2 border-black px-5 py-2 text-sm font-medium text-white bg-black rounded-lg"
                             href=""
                         >
                             Sign up
@@ -26,7 +26,7 @@ const Navbar = () => {
                     </div>
 
                     <div class="lg:hidden">
-                        <button class="p-2 border-2 border-black text-gray-600 bg-gray-100 rounded-lg" type="button">
+                        <button class="p-2 border-2 border-black text-black bg-gray-100 rounded-lg" type="button">
                             <span class="sr-only">Open menu</span>
                             <svg
                                 aria-hidden="true"

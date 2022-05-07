@@ -6,7 +6,7 @@ const Favoun = (props) => {
                 <div class="px-6 font-mono text-sm font-semibold">{props.description}</div>
             </div>
             <button>
-                <div class="my-7 h-10 w-28 rounded-2xl border border-x-2 border-black p-1 font-extrabold hover:border-x-4">{props.price} oweins</div>
+                <div class="bg-gray-200 my-7 h-10 w-28 rounded-2xl border border-x-2 border-black p-1 font-extrabold hover:bg-black hover:text-white">{props.price} oweins</div>
             </button>
         </div>
     );
