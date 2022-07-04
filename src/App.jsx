@@ -1,4 +1,4 @@
-import { Navbar, Favounav, Footer, Login, Signup } from './components';
+import { Navbar, Footer, Login, Signup, PrivateRoute, Dashboard } from './components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -7,9 +7,14 @@ export default function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Favounav />} />
+          {/* <Route path="/" element={<Homepage />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          } />
         </Routes>
         <Footer />
       </Router>

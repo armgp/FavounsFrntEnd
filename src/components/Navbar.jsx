@@ -1,6 +1,18 @@
 import { Link } from 'react-router-dom';
+import { useLocalState } from '../utils/useLocalStorage';
 
 const Navbar = () => {
+    const [jwt, setJwt] = useLocalState("", "jwt");
+
+    const loginOrOut = () =>{
+        if(jwt==""){
+            window.location.href = "/login";
+        }else{
+            setJwt("");
+            window.location.href = "/login";
+        }
+    }
+
     return (
         <header class="mx-24 my-5 border-2 border-slate-900 rounded-3xl">
             <div class="max-w-screen-xl p-4 mx-auto">
@@ -12,12 +24,12 @@ const Navbar = () => {
 
 
                     <div class="items-center justify-end flex-1 hidden space-x-4 sm:flex">
-                        <Link to={"login"}
+                        <button to={"/login"}
                             class="border-2 border-black px-5 py-2 text-sm font-medium hover:text-white hover:bg-black text-black bg-gray-100 rounded-lg"
-                            href=""
+                            onClick={loginOrOut}
                         >
-                            Log in
-                        </Link>
+                            {jwt != "" ? "Log out" : "Log in"}
+                        </button>
 
                         <Link to={"signup"}
                             class="border-2 border-black px-5 py-2 text-sm font-medium hover:text-black hover:bg-gray-100 text-white bg-black rounded-lg"
