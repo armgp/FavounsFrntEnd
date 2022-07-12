@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLocalState } from '../utils/useLocalStorage';
+import { Dropdown } from '.';
 
 const Navbar = () => {
     const [jwt, setJwt] = useLocalState("", "jwt");
@@ -22,21 +23,34 @@ const Navbar = () => {
                     </Link>
 
 
-
                     <div class="items-center justify-end flex-1 hidden space-x-4 sm:flex">
+                        
+
+                        {jwt == "" ? 
                         <button to={"/login"}
                             class="border-2 border-black px-5 py-2 text-sm font-medium hover:text-white hover:bg-black text-black bg-gray-100 rounded-lg"
                             onClick={loginOrOut}
                         >
-                            {jwt != "" ? "Log out" : "Log in"}
+                            Login
                         </button>
 
+                         : <Dropdown name="Divya" opt1="Account" opt2="Store" opt2link="/store" opt3="Support" opt4="Logout" opt4function={loginOrOut}/>}
+
+                        {jwt == "" ? 
                         <Link to={"signup"}
                             class="border-2 border-black px-5 py-2 text-sm font-medium hover:text-black hover:bg-gray-100 text-white bg-black rounded-lg"
                             href=""
                         >
                             Sign up
                         </Link>
+
+                         : <div class="flex h-12 w-32 rounded-3xl border-2 border-black p-2">
+                         <div class="ml-3 font-extrabold">100</div>
+                         <div class="ml-2 font-extrabold  text-gray-600">oweins</div>
+                     </div>}
+
+                        
+                        
                     </div>
 
                     <div class="lg:hidden">

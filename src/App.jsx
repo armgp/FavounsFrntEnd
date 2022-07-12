@@ -1,4 +1,4 @@
-import { Navbar, Footer, Login, Signup, PrivateRoute, Dashboard } from './components';
+import { Navbar, Footer, Login, Signup, PrivateRoute, Dashboard, Store } from './components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
           {/* <Route path="/" element={<Homepage />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/store" element={<Store />} />
           <Route path="/" element={
             <PrivateRoute>
               <Dashboard />
